@@ -12,6 +12,8 @@ Cost: `@startdot` needs a local Graphviz on `PATH` (`dot -V`; tested 2.44.1), an
 
 ## Shared primitives
 
+Every hex below is a placeholder. No palette is mandated by this skill: take the colours from the project's own style guide and substitute them here, keeping the roles — one tint for a band, one fill for its chips, one accent for the band header. Roles, not values, are what the recipes depend on.
+
 ```dot
 node [shape=box, style="rounded,filled", penwidth=1.2,
       color="#4C9FD3", fillcolor="#E9F4FD", fontname="Microsoft YaHei", margin="0,0"];
@@ -21,7 +23,8 @@ node [shape=box, style="rounded,filled", penwidth=1.2,
 - Chip inside a table: `<TD BGCOLOR="#2685BE" STYLE="ROUNDED"><FONT COLOR="#FFFFFF">…</FONT></TD>`.
 - Optional or terminal chip: `STYLE="ROUNDED,DASHED"` with a light fill and dark text.
 - Never put the figure title inside the image when the report supplies a caption.
-- One hue per band in a layered figure; one hue for the whole pipeline in a stage figure, with amber for decisions and muted red for failure exits.
+- Roles: one hue per band in a layered figure; one hue for the whole pipeline in a stage figure, with an accent for decisions and a muted one for failure exits. Assign lightness so the bands stay distinguishable when printed without colour; do not rely on hue alone.
+- Placeholder fills used in the snippets below measure about 3.2–4.1:1 against white text, which is below the 4.5:1 needed at 17 pt. Treat them as geometry examples: pick fills that pass, or switch to dark text on light fills.
 
 ## A. Layered bands (containment)
 
