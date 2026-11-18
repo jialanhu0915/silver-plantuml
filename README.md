@@ -1,13 +1,13 @@
 # silver-plantuml
 
-A skill for the Pi coding agent that renders `.puml` sources to images with a bundled
-PlantUML jar.
+A Pi skill for turning paper or report material into editable PlantUML diagrams. It chooses the layout by the reader's question: a layer map for module membership, a flow for a procedure, or a state diagram for transitions. For a simple flowchart, just describe the steps.
 
 ## Contents
 
 | File | Purpose |
 |---|---|
-| `SKILL.md` | The instructions Pi loads: the render command and the PlantUML syntax that actually works |
+| `SKILL.md` | Figure workflow, render command, and output checks |
+| [`references/figure-selection.md`](references/figure-selection.md) | Composition guide with two runnable views of the same example: layer map and submission workflow |
 | `plantuml-1.2026.10.jar` | PlantUML 1.2026.10, unmodified upstream release, GPL-3.0-or-later |
 | `NOTICE.md` | Licenses and attribution for the bundled jar |
 
@@ -35,7 +35,9 @@ New-Item -ItemType Junction `
 ```
 
 Once installed, Pi discovers the skill by its description, or you can force it with
-`/skill:silver-plantuml`.
+`/skill:silver-plantuml`. For example: “Use section 4.1 to show which modules belong to each layer. Keep the request sequence out of this figure and show me a preview first.”
+
+The skill delivers a `.puml` source and a rendered image. It does not generate statistical results or integrate other plotting backends.
 
 ## Usage outside Pi
 
