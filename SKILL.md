@@ -5,7 +5,7 @@ description: Design and render editable PlantUML figures for papers and technica
 
 # PlantUML figures
 
-For a straightforward flowchart or decision tree, use the requested form directly. For a paper, report, or hard-to-read existing diagram, read `references/figure-selection.md` relative to this skill directory before writing PlantUML.
+For a straightforward flowchart or decision tree, use the requested form directly. For a paper, report, or hard-to-read existing diagram, read `references/figure-selection.md` relative to this skill directory before writing PlantUML. For architecture, workflow, or relationship figures that must look like a modern journal figure rather than a default UML render, read `references/layout-recipes.md`; it carries the working `@startdot` skeletons, the Graphviz requirements, and the legibility arithmetic.
 
 1. Identify the question the reader needs this figure to answer. Use the relevant paragraph, caption, data, and existing figure as evidence. If two plausible readings would change the diagram and the source does not resolve them, ask one focused question.
 2. Match the main relationship to a layout. For example, a layer **contains** a module; it does not send data to it. Use position for membership and reserve arrows for relationships you can name. Leave secondary details in the caption or text. Split the figure if it needs two incompatible readings.
@@ -21,6 +21,8 @@ java -jar "<skill-dir>/plantuml-1.2026.10.jar" -charset UTF-8 --no-error-image "
 ```
 
 Use the actual source path in place of `diagram.puml`. This writes a PNG next to the source; add `-tsvg` for SVG. Do not treat `-DPI=300` as proof of print resolution. For raster delivery, check the actual pixel dimensions against the requested physical size. Check the render exit status and open the output: an existing file alone does not prove that the diagram rendered correctly.
+
+`@startdot` diagrams (see `references/layout-recipes.md`) are the exception to `-tsvg`: PlantUML suppresses SVG for them and writes a stub. Strip the `@startdot` / `@enddot` lines and run `dot -Tsvg` on the remaining source instead. That path needs Graphviz installed, which `@startdot` already requires.
 
 ## Syntax Conventions
 
