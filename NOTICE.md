@@ -6,10 +6,10 @@ This repository bundles one third-party binary, redistributed **unmodified**.
 
 | Field | Value |
 |---|---|
-| File | `plantuml-1.2026.6.jar` |
-| Size | 29,499,608 bytes |
-| SHA-256 | `89948F14C93756C7A3FB7B69078FF37E8489FD79DD430C582B931E2F65358690` |
-| Version | PlantUML 1.2026.6, build `6287b33`, compiled 2026-06-08 |
+| File | `plantuml-1.2026.10.jar` |
+| Size | 28,037,129 bytes |
+| SHA-256 | `E9BC9E6B2EB715E8C0C929F3DCB5FC1923BE13F37599B09C293C66D354E88686` |
+| Version | PlantUML 1.2026.10, build `a00edda`, compiled 2026-11-11 |
 | Project home | <https://plantuml.com> |
 | Source code | <https://github.com/plantuml/plantuml> |
 
@@ -24,24 +24,27 @@ the GPLv3 notice.
 
 Full license text: <https://www.gnu.org/licenses/gpl-3.0.html>
 
-Since this repository conveys the binary, the corresponding source of PlantUML 1.2026.6 is
+Since this repository conveys the binary, the corresponding source of PlantUML 1.2026.10 is
 available from the upstream project: <https://github.com/plantuml/plantuml>.
 
 ## Third-party components inside the jar
 
-Their license notices ship inside the jar under `META-INF/` and are left intact.
+The jar marks separate bundled modules through `META-INF/maven/**/pom.properties`:
 
-| Component | License | Notice in jar |
-|---|---|---|
-| JLaTeXMath | GPL-2.0 with Classpath exception | `META-INF/LICENSE`, `META-INF/COPYING` |
-| OpenPDF | MPL-2.0 OR LGPL-2.1+ | `META-INF/LICENSES.md`, `META-INF/LGPL-2.1.md` |
-| batik, commons-io, commons-logging, fop, xmlgraphics-commons, ... | Apache-2.0 | `META-INF/APACHE-LICENSE-2.0.txt` |
-| TeX fonts (Computer Modern, AMS, ...) | Knuth License / SIL OFL / Public Domain / GPL-2.0 | `org/scilab/forge/jlatexmath/fonts/licences/` |
-| SimpleXMLParser | JavaWorld article permission | `META-INF/misc_licenses.txt` |
+| Component | Version | License | Notice in jar |
+|---|---|---|---|
+| Eclipse ELK layout engine | — | EPL-2.0 OR GPL-3.0-or-later | `META-INF/maven/org.eclipse.elk/*/pom.xml` (SPDX header) |
+| Eclipse Xtext xbase.lib | 2.44.0 | EPL-2.0 | `META-INF/maven/org.eclipse.xtext/org.eclipse.xtext.xbase.lib/pom.properties` |
+| Guava, failureaccess, listenablefuture | 33.6.0-jre | Apache-2.0 | `META-INF/maven/com.google.guava/**` |
+| error_prone_annotations, j2objc-annotations | — | Apache-2.0 | `META-INF/maven/com.google.errorprone/**`, `com.google.j2objc/**` |
 
-Further attribution carried by the jar's own license display: OpenIconic, Archi sprites,
-AWS PlantUML stdlib, plantuml-icon-font-sprites, ASCIIMathML, CafeUndZopfli, Brotli,
-puml-themes, Twemoji.
+The only license text the jar ships is `META-INF/LICENSE`, which contains the Apache-2.0 text.
+`META-INF/eclipse.inf` marks the Eclipse bundles.
+
+Versions 1.2026.6 and earlier also shipped JLaTeXMath and OpenPDF as separate modules (under
+`META-INF/LICENSE`, `META-INF/COPYING`, `META-INF/LICENSES.md`, `META-INF/LGPL-2.1.md`,
+`META-INF/MPL-2.0.txt`). In 1.2026.10 their `META-INF/maven` metadata is gone; upstream
+vendored that code into PlantUML's own sources.
 
 ## Generated diagrams
 

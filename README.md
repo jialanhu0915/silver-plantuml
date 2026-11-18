@@ -8,7 +8,7 @@ PlantUML jar.
 | File | Purpose |
 |---|---|
 | `SKILL.md` | The instructions Pi loads: the render command and the PlantUML syntax that actually works |
-| `plantuml-1.2026.6.jar` | PlantUML 1.2026.6, unmodified upstream release, GPL-3.0-or-later |
+| `plantuml-1.2026.10.jar` | PlantUML 1.2026.10, unmodified upstream release, GPL-3.0-or-later |
 | `NOTICE.md` | Licenses and attribution for the bundled jar |
 
 ## Requirements
@@ -43,8 +43,8 @@ Once installed, Pi discovers the skill by its description, or you can force it w
 and the jar can live wherever this repository is checked out:
 
 ```bash
-java -jar plantuml-1.2026.6.jar diagram.puml        # writes diagram.png next to the source
-java -jar plantuml-1.2026.6.jar -tsvg diagram.puml  # writes diagram.svg
+java -jar plantuml-1.2026.10.jar diagram.puml        # writes diagram.png next to the source
+java -jar plantuml-1.2026.10.jar -tsvg diagram.puml  # writes diagram.svg
 ```
 
 Two behaviours worth knowing:

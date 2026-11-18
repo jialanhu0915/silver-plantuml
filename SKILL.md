@@ -7,10 +7,10 @@ description: Create PlantUML flowchart diagrams (`.puml` / `.plantuml`) and rend
 
 ## Rendering
 
-The jar is bundled in this skill directory as `plantuml-1.2026.6.jar`. Resolve it against the skill directory path Pi reports for this skill — not against the workspace, and not against any hardcoded user path:
+The jar is bundled in this skill directory as `plantuml-1.2026.10.jar`. Resolve it against the skill directory path Pi reports for this skill — not against the workspace, and not against any hardcoded user path:
 
 ```bash
-java -jar "<skill-dir>/plantuml-1.2026.6.jar" <file>.puml
+java -jar "<skill-dir>/plantuml-1.2026.10.jar" <file>.puml
 ```
 
 Writes `<file>.png` next to the source.
