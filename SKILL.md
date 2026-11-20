@@ -1,6 +1,6 @@
 ---
 name: silver-plantuml
-description: Design and render editable PlantUML figures for papers and technical reports: layered system architecture, research or model structure, data flows, state transitions, and experimental workflows. Also use for ordinary flowcharts, process diagrams, and decision trees.
+description: Design and render editable PlantUML figures for papers and technical reports — layered system architecture, research or model structure, data flows, state transitions, and experimental workflows. Also use for ordinary flowcharts, process diagrams, and decision trees.
 ---
 
 # PlantUML figures
